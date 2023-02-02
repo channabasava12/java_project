@@ -7,6 +7,10 @@ pipeline {
 '''
         sh '''ng build
 '''
+        nodejs('node_js_jenkins') {
+          sh 'npm install'
+        }
+
       }
     }
 
