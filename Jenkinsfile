@@ -10,5 +10,14 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        nodejs('node_js_jenkins') {
+          sh 'ng build'
+        }
+
+      }
+    }
+
   }
 }
